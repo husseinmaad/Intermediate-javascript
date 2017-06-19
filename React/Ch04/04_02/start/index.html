@@ -10,27 +10,27 @@
     <body>
         <div id='react-container'></div>
         <script type="text/babel">
-        var Note = React.createClass({
-            edit(){
-                alert ("edit")
-            },
-            remove(){
-                alert ("remove")
-            },
-
-            render(){
-                return( <div className="note">
+         var Note = React.createClass({
+         edit(){
+            alert ("edit")
+         },
+         remove(){
+            alert ("remove")
+         },
+         render(){
+            return(
+                <div className="note">
                     <p>{this.props.children}</p>
                     <span>
-                        <button onClick= {this.edit}>Edit</button>
-                        <button onClick= {this.remove}>X</button>
+                        <button onClick = {this.edit}>Edit</button>
+                        <button onClick = {this.remove}>X</button>
                     </span>
-                </div>)
-            }
-        })
-       ReactDOM.render(<Note>Hello World</Note>, 
-            document.getElementById('react-container'))
-
+                </div>
+            )
+         }
+         })
+         ReactDOM.render(<Note>hello</Note>,document.getElementById('react-container'))
+          
         </script>
     </body>
 </html>
