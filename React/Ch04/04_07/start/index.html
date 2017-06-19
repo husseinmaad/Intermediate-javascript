@@ -63,14 +63,25 @@
                     }
                 }
             },
+            getInitialState(){
+                return{
+                notes: [
+                    "Call Zaw",
+                    "Send Email to Jack",
+                    "Call emily"
+                ]
+                }
+            },
             render() {
                 return (<div className='board'>
-                    {this.props.count}
+                    {this.props.notes.map((note,i)=> {
+                    return <Note key={i}>{note}</Note>
+                    })}
                     </div>)
             }
         })
         
-        ReactDOM.render(<Board count={5000}/>, 
+        ReactDOM.render(<Board count={10}/>, 
             document.getElementById('react-container'))
 
         </script>
